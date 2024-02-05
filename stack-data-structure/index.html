@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Stack structure demonstration">
+    <meta
+            name="keywords"
+            content="stack, stack data structure, TraceMichael,
+             trace, Trace Michael, Trace-Michael, portfolio,
+              tracemichael portfolio, stack animation">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Rubik:wght@300;400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="main.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
+    <title>Stack App</title>
+
+    <style>
+        html {
+            background-image: url(./images/bg-texture2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+        }
+    </style>
+
+</head>
+<body>
+<main>
+    <h1 class="title">STACK 24601 (demo)</h1>
+    <p>First in, Last out</p>
+    <section id="controls">
+        <div>
+            <form id="generate">
+                <label for="input-value">
+                    Generate <input type="number" id="input-value" name="quantity" min="1" max="42"> Nodes
+                </label>
+                <button type="submit" id="submit-number" name="submit" value="Submit">Submit</button>
+            </form>
+            <div>
+                <button id="push">Push()</button>
+                <button id="pop">Pop()</button>
+                <button id="peek">Peek()</button>
+                <button id="reset">Reset Stack</button>
+            </div>
+        </div>
+        <div id="message-box">
+
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="drop-zone">
+                <div class="drop-target">
+
+                </div>
+                <h3 class="base-title">stack base</h3>
+                <h3 class="base-title">stack size: <span id="stack-size">42</span> remaining</h3>
+            </div>
+            <div class="drag-zone-container">
+                <h1 style="font-size: 2rem;">stack nodes:</h1>
+                <div class="drag-zone">
+
+                </div>
+                <hr style="margin: 5rem;">
+                <h1 style="font-size: 2rem;">How to use:</h1>
+                <ul>
+                    <li>Click on each node to push or click the <b>"Push()"</b> button.</li>
+                    <li>Click on the top most node in the stack or the <b>"Pop()"</b> button to remove it from the stack.</li>
+                    <li>Click on <b>"Peek()"</b>button to see what is on the top of the stack.</li>
+                    <li>Click on <b>"Reset Stack"</b>button remove all nodes from the stack.</li>
+                    <li><b>"For demonstration purposes, the stack size is set to 42." Learn more about stack from <a
+                            href="https://en.wikipedia.org/wiki/Stack_(abstract_data_type)"
+                            target="_blank"
+                    >here.</a></b></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>
