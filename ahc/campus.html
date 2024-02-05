@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus | Alliance Health College</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Rubik:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+      }
+
+      nav {
+        position: relative;
+      }
+
+      .nav-links ul li a {
+        color: #4c1115;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #4c1115;
+        margin-bottom: 20px;
+      }
+
+      p {
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .campus-images,
+      .campus-life-images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .campus-images img,
+      .campus-life-images img {
+        max-width: 100%;
+        border-radius: 8px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Responsive css */
+      @media (max-width: 768px) {
+        .container {
+          padding: 15px;
+        }
+
+        .campus-images,
+        .campus-life-images {
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        .nav-links ul li a {
+          color: #fff;
+        }
+
+        nav .fa-bars {
+          color: #6e1f24;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation menu -->
+    <nav>
+      <a href="index.html"
+        ><img src="images/logoproper-removebg-preview.png"
+      /></a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa-solid fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="programs.html">PROGRAMS</a></li>
+          <li><a href="blog.html">BLOG</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <!-- Campus content -->
+    <div class="container">
+      <h1>Campus</h1>
+      <p>
+        Welcome to our campus! Discover the facilities and infrastructure that
+        make our institution unique.
+      </p>
+
+      <!-- Campus Images -->
+      <div class="campus-images">
+        <img src="campus1.jpg" alt="Campus Image 1" />
+        <img src="campus2.jpg" alt="Campus Image 2" />
+      </div>
+    </div>
+
+    <!-- Campus Life content -->
+    <div class="container">
+      <h1>Campus Life</h1>
+      <p>
+        Experience the vibrant campus life filled with events, clubs, and
+        activities.
+      </p>
+
+      <!-- Campus Life Images -->
+      <div class="campus-life-images">
+        <img src="campus-life1.jpg" alt="Campus Life Image 1" />
+        <img src="campus-life2.jpg" alt="Campus Life Image 2" />
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2023 Alliance Health College. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Toggle Menu -->
+    <script>
+      var navLinks = document.getElementById("navLinks");
+
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+    </script>
+  </body>
+</html>

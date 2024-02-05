@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Alliance Health College</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <style>
+
+        /* Additional css */
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0px;
+            background: #f9f9f9;
+        }
+
+        nav {
+            background: #4c1115;
+            position: relative;
+            width: 100%;
+        }
+
+        .nav-links ul li a {
+            color: #fff;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #4c1115;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #4c1115;
+            padding: 20px;
+        }
+
+        footer p {
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+            width: 95%;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+
+            .nav-links ul li a {
+                color: #fff;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Navigation menu -->
+    <nav>
+        <!-- Logo -->
+        <a href="index.html">
+            <img src="images/logoproper-removebg-preview.png" alt="Alliance Health College Logo">
+        </a>
+
+        <!-- Navigation Links -->
+        <div class="nav-links" id="navLinks">
+            <i class="fa-solid fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="admission.html">ADMISSIONS</a></li>
+                <li><a href="programs.html">PROGRAMS</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+
+        <!-- Toggle Menu Icon -->
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <!-- Gallery content -->
+    <div class="container">
+        <h1>Photo Gallery</h1>
+        <p>Explore our campus and events through the following images.</p>
+
+        <!-- Image Gallery -->
+        <div class="gallery">
+            <img src="image1.jpg" alt="Gallery Image 1">
+            <img src="image2.jpg" alt="Gallery Image 2">
+            <img src="image3.jpg" alt="Gallery Image 3">
+            <!-- bro, add more images here -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2023 Alliance Health College. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Toggle Menu -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+</body>
+
+</html>

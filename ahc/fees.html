@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tuition & Fees | Alliance Health College</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Rubik:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <style>
+      /* Additional css */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f9f9f9;
+      }
+
+      .container {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1,
+      h2 {
+        color: #6e1f24;
+      }
+
+      nav {
+        position: relative;
+      }
+
+      .nav-links ul {
+        padding-right: 20px;
+      }
+
+      .nav-links ul li a {
+        color: #6e1f24;
+        text-decoration: none;
+        text-align: center;
+        font-size: 13px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      th,
+      td {
+        padding: 8px 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+
+      footer p {
+        text-align: center;
+      }
+
+      @media (max-width: 768px) {
+        nav .fa-bars {
+          color: #6e1f24;
+        }
+
+        .nav-links ul li a {
+          color: #fff;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation menu -->
+    <nav>
+      <a href="index.html"
+        ><img src="images/logoproper-removebg-preview.png"
+      /></a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa-solid fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="programs.html">PROGRAMS</a></li>
+          <li><a href="blog.html">BLOG</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <!-- Fees content -->
+    <div class="container">
+      <h1>Tuition & Fees</h1>
+      <p>
+        At Alliance Health College, we strive to provide quality education at an
+        affordable cost. Below are the details of our tuition fees for various
+        programs and courses.
+      </p>
+
+      <h2>M. C. A. Programs</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Program</th>
+            <th>Tuition Fee</th>
+            <th>Additional Costs</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Program Name 1</td>
+            <td>$10,000</td>
+            <td>$500 (Books, etc.)</td>
+          </tr>
+          <tr>
+            <td>Program Name 2</td>
+            <td>$12,000</td>
+            <td>$600 (Books, etc.)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Other Programs</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Program</th>
+            <th>Tuition Fee</th>
+            <th>Additional Costs</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Program Name 1</td>
+            <td>$15,000</td>
+            <td>$700 (Books, etc.)</td>
+          </tr>
+          <tr>
+            <td>Program Name 2</td>
+            <td>$18,000</td>
+            <td>$800 (Books, etc.)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2023 Alliance Health College. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Toggle Menu -->
+    <script>
+      var navLinks = document.getElementById("navLinks");
+
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+    </script>
+  </body>
+</html>

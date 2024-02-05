@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni | Alliance Health College</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        /* Additional css */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 40px;
+            background-color: #f9f9f9;
+        }
+
+        nav {
+            background: #4c1115;
+            position: relative;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #4c1115;
+        }
+
+        .alumni-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .alumni-list li {
+            margin-bottom: 20px;
+        }
+
+        .alumni-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .alumni-list img {
+            width: 100px;
+            height: auto;
+            border-radius: 50%;
+            margin-right: 20px;
+            vertical-align: middle;
+        }
+
+        footer {
+            background: #4c1115;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Navigation menu -->
+    <nav>
+        <a href="index.html"
+          ><img src="images/logoproper-removebg-preview.png"
+        /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa-solid fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="programs.html">PROGRAMS</a></li>
+            <li><a href="blog.html">BLOG</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+      </nav>
+
+    <!-- Alumni content -->
+    <div class="container">
+        <h1>Alumni</h1>
+        <p>Welcome to our alumni page! Here, we celebrate the achievements and successes of our esteemed graduates.</p>
+
+        <!-- Alumni List -->
+        <ul class="alumni-list">
+            <!-- Example Alumni Entry -->
+            <li>
+                <img src="path_to_alumni_image.jpg" alt="Alumni Name">
+                <h2>Alumni Name</h2>
+                <p>Graduated in [Year]. Currently working at [Institution Name].</p>
+                <!-- kofi, add more details if you want -->
+            </li>
+        </ul>
+    </div>
+
+
+    <footer>
+        <div class="footer__copyright">
+          <small
+            >Copyright ©2023 ALLIANCE HEALTH COLLEGE. All rights reserved. by
+            Trace Michael</small
+          >
+        </div>
+      </footer>
+  
+      <!-- JavaScript for Toggle Menu -->
+      <script>
+        var navLinks = document.getElementById("navLinks");
+  
+        function showMenu() {
+          navLinks.style.right = "0";
+        }
+  
+        function hideMenu() {
+          navLinks.style.right = "-200px";
+        }
+      </script>
+</body>
+
+</html>

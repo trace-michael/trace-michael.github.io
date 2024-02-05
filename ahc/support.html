@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support AHC | Alliance Health College</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Rubik:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <style>
+      /* Support AHC css */
+
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      nav {
+        position: relative;
+      }
+
+      .nav-links ul li a {
+        color: #4c1115;
+      }
+
+      h1,
+      h2 {
+        color: #4c1115;
+        margin-bottom: 20px;
+      }
+
+      p {
+        color: #555;
+        line-height: 1.6;
+      }
+
+      button {
+        background-color: #4c1115;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color all 400ms ease;
+      }
+
+      button:hover {
+        background-color: #3a0b0d;
+      }
+
+      #donate,
+      #testimonials,
+      #cta {
+        margin-bottom: 40px;
+      }
+
+      .testimonial {
+        padding: 20px;
+        border-left: 4px solid #4c1115;
+        margin-bottom: 20px;
+      }
+
+      .testimonial blockquote {
+        font-style: italic;
+        margin-bottom: 10px;
+      }
+
+      .testimonial cite {
+        color: #777;
+      }
+
+      footer p {
+        text-align: center;
+      }
+
+      /* Responsive css */
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 15px;
+        }
+
+        .nav-links ul li a {
+          color: #fff;
+        }
+
+        nav .fa-bars {
+          color: #6e1f24;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html"
+        ><img src="images/logoproper-removebg-preview.png"
+      /></a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa-solid fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="programs.html">PROGRAMS</a></li>
+          <li><a href="blog.html">BLOG</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <!-- Support AHC content -->
+    <div class="container">
+      <h1>Support Alliance Health College</h1>
+      <p>
+        Help us continue our mission to provide quality education and resources
+        to our students and community.
+      </p>
+
+      <!-- Donation Section -->
+      <section id="donate">
+        <h2>Make a Donation</h2>
+        <p>
+          Your contribution will make a difference in the lives of our students
+          and the future of our institution.
+        </p>
+        <button onclick="openDonationPage()">Donate Now</button>
+      </section>
+
+      <!-- Testimonials -->
+      <section id="testimonials">
+        <h2>What Our Supporters Are Saying</h2>
+        <div class="testimonial">
+          <blockquote>
+            "Alliance Health College has had a profound impact on our community.
+            I'm proud to support such a worthy cause."
+          </blockquote>
+          <cite>- John Doe</cite>
+        </div>
+        <div class="testimonial">
+          <blockquote>
+            "Alliance Health College has had a profound impact on our community.
+            I'm proud to support such a worthy cause."
+          </blockquote>
+          <cite>- John Doe</cite>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section id="cta">
+        <h2>Join Us in Making a Difference</h2>
+        <p>
+          Support Alliance Health College and help shape the future of
+          healthcare education.
+        </p>
+        <button onclick="openDonationPage()">Support Now</button>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2023 Alliance Health College. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for donation page redirection -->
+    <script>
+      function openDonationPage() {
+        window.location.href = "donation_page.html";
+      }
+    </script>
+
+    <!-- JavaScript for Toggle Menu -->
+    <script>
+      var navLinks = document.getElementById("navLinks");
+
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+    </script>
+  </body>
+</html>

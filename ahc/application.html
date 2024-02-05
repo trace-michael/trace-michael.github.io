@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application | Alliance Health College</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* Additional styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 40px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        h1, h2 {
+            color: #6e1f24;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #6e1f24;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        footer {
+            background: #f9f9f9;
+        }
+
+        footer p {
+            text-align: center;
+        }
+
+        nav ul {
+            padding-top: 350px;
+        }
+
+        nav ul li {
+            padding: 10px;
+        } 
+
+        nav ul li a {
+            text-decoration: none;
+            color: #6e1f24;
+        }
+
+        nav ul li a::after {
+            content: "";
+  width: 0%;
+  height: 2px;
+  background: #6e1f24;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+        }
+
+        ul li a:hover::after {
+  width: 100%;
+}
+
+        input[type="submit"]:hover {
+            background-color: #4c1115;
+        }
+
+        /* Validation Styles */
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <!-- Navigation menu -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="application.html">Application</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Application content -->
+    <div class="container">
+        <h1>Application for Admission</h1>
+        <p>Thank you for considering Alliance Health College. Please fill out the form below to begin your application process.</p>
+
+        <!-- Application form -->
+<form action="submit_application.php" method="post" id="applicationForm" onsubmit="return validateForm()">
+    
+    <!-- Personal Information -->
+    <h2>Personal Information</h2>
+    <label for="fullname">Full Name:</label>
+    <input type="text" id="fullname" name="fullname" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone">
+
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" rows="4" required></textarea>
+
+    <!-- Academic Information -->
+    <h2>Academic Information</h2>
+    <label for="previous_school">Previous School:</label>
+    <input type="text" id="previous_school" name="previous_school" required>
+
+    <label for="grade_level">Shift:</label>
+    <select id="grade_level" name="grade_level" required>
+        <option value="">Select Shift</option>
+        <option value="9">Morning Shift</option>
+        <option value="10">Afternoon Shift</option>
+        <option value="11">Evening Shift</option>
+        <option value="12">Night Shift</option>
+        <option value="12">Weekend Option</option>
+    </select>
+
+    <label for="desired_major">Desired Program:</label>
+    <input type="text" id="desired_major" name="desired_major">
+
+    <!-- Extracurricular Activities -->
+    <h2>Extracurricular Activities</h2>
+    <label for="activities">List of Activities:</label>
+    <textarea id="activities" name="activities" rows="4"></textarea>
+
+    <!-- References -->
+    <h2>References</h2>
+    <label for="reference1">Reference 1:</label>
+    <input type="text" id="reference1" name="reference1" required>
+
+    <label for="reference2">Reference 2:</label>
+    <input type="text" id="reference2" name="reference2">
+
+    <!-- Additional Documents -->
+    <h2>Additional Documents</h2>
+
+    <label for="passports">Passport Photo:</label>
+    <input type="file" id="passports" name="passports" accept=".png,.jpg,.jpeg" required>
+
+    <label for="transcripts">Transcripts:</label>
+    <input type="file" id="transcripts" name="transcripts" accept=".pdf,.doc,.docx" required>
+
+    <label for="certificates">Certificates (if any):</label>
+    <input type="file" id="certificates" name="certificates" accept=".pdf,.doc,.docx">
+
+    <!-- Submit button -->
+    <input type="submit" value="Submit Application">
+</form>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2023 Alliance Health College. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for form validation or interactivity -->
+
+    <script>
+        function validateForm() {
+            let isValid = true;
+            const form = document.getElementById("applicationForm");
+
+            // Example validation (you can add more as needed)
+            if (form.fullname.value === "") {
+                alert("Full Name must be filled out");
+                isValid = false;
+            }
+
+            if (form.email.value === "") {
+                alert("Email must be filled out");
+                isValid = false;
+            }
+
+            if (form.address.value === "") {
+                alert("Address must be filled out");
+                isValid = false;
+            }
+
+            // Add more validations as needed...
+
+            return isValid;
+        }
+    </script>
+
+</body>
+
+</html>

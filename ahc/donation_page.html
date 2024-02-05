@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate | Alliance Health College</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Rubik:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <style>
+      /* Donation css */
+
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      nav {
+        position: relative;
+      }
+
+      .nav-links ul li a {
+        color: #4c1115;
+      }
+
+      h1,
+      h2 {
+        color: #4c1115;
+        margin-bottom: 20px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      label {
+        font-weight: 600;
+        color: #555;
+      }
+
+      input[type="text"],
+      input[type="number"],
+      input[type="email"] {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+
+      button {
+        background-color: #4c1115;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #3a0b0d;
+      }
+
+      @media (max-width: 768px) {
+        .nav-links ul li a {
+          color: #fff;
+        }
+
+        nav .fa-bars {
+          color: #6e1f24;
+        }
+
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation menu -->
+    <nav>
+      <a href="index.html"
+        ><img src="images/logoproper-removebg-preview.png"
+      /></a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa-solid fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="programs.html">PROGRAMS</a></li>
+          <li><a href="blog.html">BLOG</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <!-- Donation page content -->
+    <div class="container">
+      <h1>Make a Donation</h1>
+      <p>
+        Thank you for choosing to support Alliance Health College. Please fill
+        in the details below to proceed with your donation.
+      </p>
+
+      <form id="donationForm" action="process_donation.php" method="post">
+        <label for="amount">Donation Amount ($)</label>
+        <input
+          type="number"
+          id="amount"
+          name="amount"
+          placeholder="Enter amount"
+        />
+
+        <label for="name">Full Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your full name"
+        />
+
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email address"
+        />
+
+        <button type="submit">Proceed to Payment</button>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2023 Alliance Health College. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Toggle Menu -->
+    <script>
+      var navLinks = document.getElementById("navLinks");
+
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+    </script>
+  </body>
+</html>
