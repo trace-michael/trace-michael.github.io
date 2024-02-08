@@ -2048,7 +2048,7 @@ ul.actions li:first-child {
 }
 
 .icon.solid:before {
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .icon.brands:before {
@@ -2056,7 +2056,7 @@ ul.actions li:first-child {
 }
 
 .icon.featured {
-  color: #ea8a95;
+  color: goldenrod;
   display: block;
   margin: 0 0 1.5em 0;
   cursor: default;
