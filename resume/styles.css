@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Rubik:wght@300;400;500;600&display=swap");
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    margin: 50px;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+}
+
+.container .left {
+    position: relative;
+    background: #003147;
+    padding: 40px ;
+}
+
+.profileInfo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.profileInfo h2 {
+    color: #fff;
+    font-size: 1.2em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.4em;
+}
+
+.profileInfo h2 span {
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+.contactDetails {
+    padding-top: 40px;
+}
+
+.title {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.contactDetails ul {
+    position: relative;
+}
+
+.contactDetails ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.contactDetails ul li .icon {
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #03a9f4;
+}
+
+.contactDetails ul li span {
+    color: #fff;
+    font-weight: 300;
+    font-size: 11px;
+}
+
+.contactDetails ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.eduDetails {
+    padding-top: 30px;
+}
+
+.eduDetails li {
+    margin-bottom: 15px;
+}
+
+.eduDetails h4:nth-child(2) 
+{
+    color: #fff;
+    font-weight: 300;
+    font-size: 13px;
+}
+.eduDetails h4 {
+    color: #fff;
+    font-weight: 600;
+}
+
+.languageDetails {
+    padding-top: 30px;
+}
+
+.languageDetails ul li {
+    margin: 10px 0;
+    color: #fff;
+}
+
+.languageDetails .percent {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #081921;
+    display: block;
+    margin-top: 5px;
+}
+
+.languageDetails .percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+
+
+
+.container .right {
+    position: relative;
+    background: #fff;
+    padding: 40px;
+}
+
+.summary {
+    margin-bottom: 50px;
+}
+
+.summary:last-child {
+    margin-bottom: 0;
+}
+
+.title_2{
+    color: #003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555;
+}
+
+.summary .box {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.summary .box .year_company {
+    min-width: 170px;
+}
+
+.summary .box .year_company h5 {
+    text-transform: uppercase;
+    color: #ccc;
+    font-weight: 600;
+}
+
+.summary .box .text h4 {
+    text-transform: uppercase;
+    color: #ccc;
+    font-size: 16px;
+}
+
+.summary .box .text ul li {
+    list-style: disc;
+    color: #555;
+}
+
+.skills .box {
+    position: relative;
+    width: 100%;
+    display: grid;
+}
+
+.skills .box h4 {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.skills .box h4 span {
+    text-transform: none;
+    font-weight: 300;
+}
+
+.skills .box ul li {
+    list-style: disc;
+    margin: 10px 0;
+}
+
+.projects h5 span {
+    font-weight: 300;
+    color: #555;
+}
+
+.projects h5 a {
+    font-weight: lighter;
+    font-style: italic;
+    text-decoration: none;
+    color: #ccc;
+}
+
+.hobbies h2 {
+    margin-top: 40px;
+}
+
+.hobbies ul li .fa {
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #03a9f4;
+}
+
+.hobbies ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+}
