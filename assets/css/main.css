@@ -1686,6 +1686,10 @@ article:last-child {
 
 /* Button */
 
+button {
+  padding: 2px;
+}
+
 .btn {
   padding: 15px 40px;
   border: none;
@@ -1955,7 +1959,7 @@ ul.actions li:first-child {
 }
 
 .icon.featured:before {
-  font-size: 6em;
+  font-size: 5em;
 }
 
 /* Wrappers */
