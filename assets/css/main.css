@@ -2000,21 +2000,6 @@ ul.actions li:first-child {
   color: #fff;
 }
 
-.wrapper.style4 form input[type="text"],
-.wrapper.style4 form input[type="password"],
-.wrapper.style4 form select,
-.wrapper.style4 form textarea {
-  border: none;
-  background: #282828;
-}
-
-.wrapper.style4 form input[type="text"]:focus,
-.wrapper.style4 form input[type="password"]:focus,
-.wrapper.style4 form select:focus,
-.wrapper.style4 form textarea:focus {
-  background: #252525;
-}
-
 /* Articles */
 
 body > article {
@@ -2050,6 +2035,10 @@ body > article {
   color: inherit;
 }
 
+.col-8 .col-7-large .col-12-medium {
+  align-items: center;
+  text-align: center;
+}
 
 /* Large */
 
