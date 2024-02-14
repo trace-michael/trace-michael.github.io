@@ -1686,9 +1686,12 @@ article:last-child {
 
 /* Button */
 
-.btn {
+.button {
   padding: 1.25em 2em;
   margin: 1rem auto;
+}
+
+.btn {
   border: none;
   outline: none;
   color: #fff;
