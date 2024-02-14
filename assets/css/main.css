@@ -205,8 +205,8 @@ a {
   -webkit-transition: color 0.2s ease-in-out;
   -ms-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
-  color: #43b3e0;
-  text-decoration: underline;
+  color: #fff;
+  text-decoration: none;
 }
 
 a:hover {
@@ -328,14 +328,6 @@ header > p {
   font-size: 1.25em;
   margin: 0;
   color: goldenrod;
-}
-
-footer {
-  margin: 3em 0 0 0;
-}
-
-footer > p {
-  font-size: 1.25em;
 }
 
 /* Container */
@@ -1702,11 +1694,19 @@ article:last-child {
   cursor: pointer;
   position: relative;
   z-index: 0;
-  border-radius: 15px;
+  border-radius: 12px;
 }
 
-.btn .a {
-  text-decoration: none;
+.btn::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #242424;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
 }
 
 /* List */
@@ -2109,14 +2109,6 @@ body > article {
     font-size: 1.25em;
   }
 
-  footer {
-    margin: 2.5em 0 0 0;
-  }
-
-  footer > p {
-    font-size: 1.25em;
-  }
-
   hr {
     margin: 1.5em 0 2em 0;
   }
@@ -2130,25 +2122,8 @@ body > article {
 
   /* Button */
 
-  input[type="button"],
-  input[type="submit"],
-  input[type="reset"],
-  button,
-  .button {
-    text-align: center;
-    font-size: 1.2em;
-    width: 100%;
-    padding: 1em 0 1em 0;
-  }
 
-  input[type="button"].large,
-  input[type="submit"].large,
-  input[type="reset"].large,
-  button.large,
-  .button.large {
-    font-size: 1.2em;
-    letter-spacing: 0;
-  }
+  
 
   /* Social */
 
