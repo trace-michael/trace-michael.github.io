@@ -1686,7 +1686,7 @@ article:last-child {
 
 /* Button */
 
-.button {
+.button.btn {
   padding: 1.25em 2em;
   margin: 1rem auto;
   background-color: #242424;
@@ -1699,7 +1699,7 @@ article:last-child {
   border-radius: 12px;
 }
 
-.button::after {
+.button.btn::after {
   content: "";
   z-index: -1;
   position: absolute;
@@ -1711,7 +1711,7 @@ article:last-child {
   border-radius: 10px;
 }
 
-.button::after {
+.button.btn::after {
   content: "";
   background: linear-gradient(
     45deg,
@@ -1738,15 +1738,15 @@ article:last-child {
   100% {background-position: 0 0;}
 }
 
-.button:hover::before {
+.button.btn:hover::before {
   opacity: 1;
 }
 
-.button:active:after {
+.button.btn:active:after {
   background: transparent;
 }
 
-.button:active {
+.button.btn:active {
   color: #242424;
   font-weight: 500;
 }
