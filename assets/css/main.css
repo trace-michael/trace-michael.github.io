@@ -324,10 +324,12 @@ header {
   margin: 0 0 3em 0;
 }
 
-header > p {
+header > span {
   font-size: 1.25em;
   margin: 0;
-  color: goldenrod;
+  padding: 0;
+  color: gold;
+  text-transform: lowerercase;
 }
 
 /* Container */
@@ -1598,40 +1600,6 @@ header > p {
   }
 }
 
-/* Tables */
-
-table {
-  width: 100%;
-}
-
-table.default {
-  width: 100%;
-}
-
-table.default tr {
-  border-top: solid 1px #eee;
-}
-
-table.default tr:first-child {
-  border-top: 0;
-}
-
-table.default td {
-  padding: 0.5em 1em 0.5em 1em;
-}
-
-table.default th {
-  text-align: left;
-  padding: 0.5em 1em 0.5em 1em;
-  font-weight: 600;
-  margin: 0 0 1em 0;
-}
-
-table.default thead {
-  background: #4f4f4f;
-  color: #fff;
-}
-
 /* Section/Article */
 
 section,
@@ -1659,6 +1627,8 @@ article:last-child {
 }
 
 .image.fit {
+  margin: 2em;
+  padding-top: 8em;
   display: block;
   width: 100%;
 }
@@ -1686,13 +1656,9 @@ article:last-child {
 
 /* Button */
 
-.button.btn {
-  margin: 1rem auto;
-}
-
 .btn {
   padding: 1.25em 2em;
-  margin: 1rem auto;
+  margin: 0.0125rem auto;
   background-color: #242424;
   border: none;
   outline: none;
@@ -1701,11 +1667,16 @@ article:last-child {
   position: relative;
   z-index: 0;
   border-radius: 293486px;
-  line-height: 1;
+  line-height: 0.25;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: smaller;
+  font-weight: 300;
   display: block;
+  width: 40%;
 }
 
-.btn::after {
+.btn:hover::after {
   content: "";
   z-index: -1;
   position: absolute;
@@ -1714,10 +1685,10 @@ article:last-child {
   background-color: #242424;
   left: 0;
   top: 0;
-  border-radius: 10px;
+  border-radius: 293486px;
 }
 
-.btn::after {
+.btn:hover::before {
   content: "";
   background: linear-gradient(
     45deg,
@@ -1733,8 +1704,8 @@ article:last-child {
   height: calc(100% + 4px);
   filter: blur(8px);
   animation: glowing 20s linear infinite;
-  transition: opacity .3s ease-in-out;
-  border-radius: 10px;
+  transition: opacity all 400ms ease;
+  border-radius: 293486px;
   opacity: 1;
 }
 
@@ -1754,7 +1725,7 @@ article:last-child {
 
 .btn:active {
   color: #242424;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* List */
@@ -1768,15 +1739,6 @@ ul li {
   padding-left: 0.5em;
 }
 
-ol {
-  list-style: decimal;
-  padding-left: 1.25em;
-}
-
-ol li {
-  padding-left: 0.25em;
-}
-
 /* Social */
 
 ul.social {
@@ -1784,6 +1746,8 @@ ul.social {
   margin: 0;
   list-style: none;
   padding-left: 0;
+  padding-top: 1rem;
+  text-align: center;
 }
 
 ul.social li {
@@ -1892,15 +1856,16 @@ ul.actions li:first-child {
 /* Box */
 
 .box {
-  background: #fff;
+  background: transparent;
   box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
     0px 2px 3px 0px rgba(0, 0, 0, 0.1);
   text-align: center;
   padding: 2em;
+  margin: 1.5em;
 }
 
 .box.style1 {
-  padding: 3em 2em 3.5em 2em;
+  padding: 8em 2em 3em 2em;
 }
 
 .box.style1 h3 {
@@ -1922,7 +1887,6 @@ ul.actions li:first-child {
 /* Icons */
 
 .icon {
-  text-decoration: none;
   text-decoration: none;
 }
 
@@ -1956,7 +1920,7 @@ ul.actions li:first-child {
 }
 
 .icon.featured {
-  color: goldenrod;
+  color: gold;
   display: block;
   margin: 0 0 1.5em 0;
   cursor: default;
@@ -1998,24 +1962,8 @@ body > article {
   margin-bottom: 0;
 }
 
-#top {
-  padding: 10em 0 10em 0;
-  text-align: left;
-}
-
-#top .image {
-  border-radius: 100%;
-  width: 20em;
-  height: 20em;
-  margin: 0;
-}
-
 #top .image img {
   border-radius: 100%;
-}
-
-#top h1 {
-  margin-top: 0.35em;
 }
 
 #top p {
@@ -2035,6 +1983,14 @@ body > article {
 
   body {
     font-size: 11pt;
+  }
+
+  .image.fit {
+    margin: 2em;
+    padding: 2em;
+    padding-top: 6em;
+    display: block;
+    width: 100%;
   }
 
   input,
@@ -2084,6 +2040,11 @@ body > article {
 }
 
 /* Small */
+@media screen and (max-width: 320px) {
+  .btn {
+    width: 50%;
+  }
+}
 
 @media screen and (max-width: 736px) {
   /* Basic */
@@ -2126,6 +2087,13 @@ body > article {
 
   hr {
     margin: 1.5em 0 2em 0;
+  }
+
+  .image.fit {
+    margin: 0;
+    padding-top: 0;
+    display: block;
+    width: 100%;
   }
 
   /* Section/Article */
