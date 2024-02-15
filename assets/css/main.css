@@ -91,10 +91,7 @@ body.is-preload *:after {
   transition: none !important;
 }
 
-body,
-input,
-textarea,
-select {
+body {
   font-family: "Open Sans", sans-serif;
   line-height: 1.85em;
   color: #888;
@@ -119,33 +116,9 @@ a img {
   border: 0;
 }
 
-b,
 strong {
   font-weight: 600;
   color: #3e3e3e;
-}
-
-i,
-em {
-  font-style: italic;
-}
-
-sub {
-  position: relative;
-  top: 0.5em;
-  font-size: 0.8em;
-}
-
-sup {
-  position: relative;
-  top: -0.5em;
-  font-size: 0.8em;
-}
-
-blockquote {
-  border-left: solid 0.75em #eee;
-  padding: 1em 0 1em 1.5em;
-  font-style: italic;
 }
 
 h1,
@@ -196,29 +169,17 @@ h3 {
   letter-spacing: -0.015em;
 }
 
-em,
+/* em,
 i {
   font-style: italic;
-}
+} */
 
 br.clear {
   clear: both;
 }
 
-hr {
-  border: 0;
-  border-top: solid 1px #444;
-  border-top-color: rgba(0, 0, 0, 0.35);
-  box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
-  height: 1px;
-  margin: 3em 0;
-}
-
 p,
-ul,
-ol,
-dl,
-table {
+ul {
   margin-bottom: 2em;
 }
 
