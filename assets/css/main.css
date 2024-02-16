@@ -5,6 +5,7 @@ html,
 body,
 div,
 span,
+strong,
 h1,
 h2,
 h3,
@@ -13,10 +14,9 @@ h5,
 h6,
 p,
 a,
+i,
 em,
 img,
-small,
-strong,
 var,
 ul,
 li,
@@ -25,8 +25,8 @@ footer,
 header,
 menu,
 nav,
-section,
-summary {
+small,
+section {
   margin: 0;
   padding: 0;
   border: 0;
@@ -1555,8 +1555,14 @@ article:last-child {
   content: "";
   background: linear-gradient(
     45deg,
-    #ff0000, #ff7300, #fffb00, #48ff00,
-    #00ffd5, #002bff, #ff00c8, #ff0000
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #ff00c8,
+    #ff0000
   );
   position: absolute;
   top: -2px;
@@ -1573,9 +1579,15 @@ article:last-child {
 }
 
 @keyframes glowing {
-  0% {background-position: 0 0;}
-  50% {background-position: 400% 0;}
-  100% {background-position: 0 0;}
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
 .btn:hover::before {
@@ -1728,7 +1740,13 @@ ul.actions li:first-child {
 }
 
 .box.style1 {
-  padding: 8em 2em 3em 2em;
+  padding: 4em 2em 3em 2em;
+  filter: blur(.5px);
+}
+
+.box.style1:hover {
+  background: #fff;
+  filter: none;
 }
 
 .box.style1 h3 {
@@ -1782,15 +1800,15 @@ ul.actions li:first-child {
   font-family: "Font Awesome 5 Brands";
 }
 
-.icon.featured {
+.fas {
   color: gold;
   display: block;
   margin: 0 0 1.5em 0;
   cursor: default;
 }
 
-.icon.featured:before {
-  font-size: 5em;
+.fas:before {
+  font-size: 5rem;
 }
 
 /* Wrappers */
@@ -1838,7 +1856,6 @@ body > article {
   color: inherit;
 }
 
-
 /* Large */
 
 @media screen and (max-width: 1280px) {
@@ -1872,7 +1889,6 @@ body > article {
     padding: 5em 0 5em 0;
     text-align: center;
   }
-
 
   /* Articles */
 
@@ -1967,9 +1983,6 @@ body > article {
   }
 
   /* Button */
-
-
-  
 
   /* Social */
 
