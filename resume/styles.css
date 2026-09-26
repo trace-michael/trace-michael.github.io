@@ -145,6 +145,26 @@ body {
     background: #03a9f4;
 }
 
+.refDetails {
+    padding-top: 30px;
+}
+
+.refDetails li {
+    margin-bottom: 15px;
+}
+
+.refDetails h4 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 1.5em;
+}
+
+.refDetails h4.name {
+    font-weight: 600;
+    font-size: 14px;
+}
+
 
 
 .container .right {
